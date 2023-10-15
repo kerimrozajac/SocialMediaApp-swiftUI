@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView{
+            List{
+                Text("Content View")
+                NavigationLink(destination: LoginView()) {
+                    Text("Go to Login View")
+                }
+                NavigationLink(destination: SignUpView()) {
+                    Text("Go to SignUP View")
+                }
+                NavigationLink(destination: PasswordResetView()) {
+                    Text("Go to Password Reset View")
+                }
+                NavigationLink(destination: ChangePasswordView()) {
+                    Text("Go to Change Password View")
+                }
+            }
         }
-        .padding()
     }
 }
 
